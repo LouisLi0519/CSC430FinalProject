@@ -11,12 +11,12 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*  if (!Team3Restaurant.ManagementSystem.Login.LoginMagement.IsLogin())
+              if (!Team3Restaurant.ManagementSystem.Login.LoginMagement.IsLogin())
               {
                   string s_url;
                   s_url = "LoginWeb.aspx";
                   Response.Redirect(s_url);
-              }*/
+              }
         }
 
 
@@ -44,9 +44,11 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
         {
             Button order = sender as Button;
             string orderID = order.CommandArgument;
-            if (orderID == "")
-                return;
             string status = DLOrderStatus.SelectedValue;
+            if (orderID == null|| status.Equals("none"))
+                return;
+         
+
             Team3Restaurant.ManagementSystem.OrderManagement OM = new Team3Restaurant.ManagementSystem.OrderManagement();
             OM.ChangeStatus(orderID, status);
             GVOrderList.DataBind();
@@ -58,6 +60,11 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
             string s_url;
             s_url = "MainScreenWeb.aspx?stuffID=" + Team3Restaurant.ManagementSystem.Login.LoginMagement._stuffID;
             Response.Redirect(s_url);
+        }
+
+        protected void DLOrderStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

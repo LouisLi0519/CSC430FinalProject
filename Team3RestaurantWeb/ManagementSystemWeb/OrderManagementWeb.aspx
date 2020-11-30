@@ -34,12 +34,13 @@
         <asp:ObjectDataSource ID="OrderViewDataSource" runat="server" SelectMethod="GetOrderList" TypeName="Team3Restaurant.ManagementSystem.OrderManagement"></asp:ObjectDataSource>
         
         <div style="margin-left: 400px">
-            <asp:DropDownList ID="DLOrderStatus" runat="server" Font-Bold="True" Font-Size="XX-Large">
-                <asp:ListItem>Confirmed</asp:ListItem>
-                <asp:ListItem>Received</asp:ListItem>
-                <asp:ListItem>Finished</asp:ListItem>
-                <asp:ListItem>Paid</asp:ListItem>
-                <asp:ListItem>Cancelled</asp:ListItem>
+            <asp:DropDownList ID="DLOrderStatus" runat="server" Font-Bold="True" Font-Size="XX-Large" OnSelectedIndexChanged="DLOrderStatus_SelectedIndexChanged">
+                <asp:ListItem>none</asp:ListItem>
+                <asp:ListItem>confirmed</asp:ListItem>
+                <asp:ListItem>received</asp:ListItem>
+                <asp:ListItem>finished</asp:ListItem>
+                <asp:ListItem>paid</asp:ListItem>
+                <asp:ListItem>cancelled</asp:ListItem>
             </asp:DropDownList>
         </div>
         

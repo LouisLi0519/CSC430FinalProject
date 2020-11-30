@@ -75,9 +75,9 @@
     <Content Include="ManagementSystemWeb\MainScreenWeb.aspx" />
     <Content Include="ManagementSystemWeb\MenuManagementWeb.aspx" />
     <Content Include="ManagementSystemWeb\OrderManagementWeb.aspx" />
-    <Content Include="ManagementSystemWeb\OrderViewWeb.aspx" />
     <Content Include="ManagementSystemWeb\PaymentSystem.aspx" />
     <Content Include="ManagementSystemWeb\PrintSystemWeb.aspx" />
+    <Content Include="ManagementSystemWeb\Receipt.aspx" />
     <Content Include="OrderSystem\orderWebIndex.aspx" />
     <Content Include="OrderSystem\OrderMenuWeb.aspx" />
     <Content Include="OrderSystem\ViewCurrentOrderWeb.aspx" />
@@ -119,13 +119,6 @@
     <Compile Include="ManagementSystemWeb\OrderManagementWeb.aspx.designer.cs">
       <DependentUpon>OrderManagementWeb.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ManagementSystemWeb\OrderViewWeb.aspx.cs">
-      <DependentUpon>OrderViewWeb.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ManagementSystemWeb\OrderViewWeb.aspx.designer.cs">
-      <DependentUpon>OrderViewWeb.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ManagementSystemWeb\PaymentSystem.aspx.cs">
       <DependentUpon>PaymentSystem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -139,6 +132,13 @@
     </Compile>
     <Compile Include="ManagementSystemWeb\PrintSystemWeb.aspx.designer.cs">
       <DependentUpon>PrintSystemWeb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagementSystemWeb\Receipt.aspx.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagementSystemWeb\Receipt.aspx.designer.cs">
+      <DependentUpon>Receipt.aspx</DependentUpon>
     </Compile>
     <Compile Include="OrderSystem\orderWebIndex.aspx.cs">
       <DependentUpon>orderWebIndex.aspx</DependentUpon>

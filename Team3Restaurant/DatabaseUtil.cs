@@ -31,7 +31,7 @@ namespace Team3Restaurant
         }
         public static string GetUnpaidOrderQuery()
         {
-            return "select distinct order_id,ipad_id from order_list where status <> 'paid'";
+            return "select distinct order_id,ipad_id from order_list where status = 'finished'";
         }
         public static string GetRecieptQuery(string orderID)
         {
