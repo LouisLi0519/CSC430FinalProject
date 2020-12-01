@@ -18,5 +18,26 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
                 Response.Redirect(s_url);
             }
         }
+
+        protected void BtnPrint_Click(object sender, EventArgs e)
+        {
+            Button lb = sender as Button;
+            string orderID = lb.CommandArgument;
+            if (orderID == null)
+            {
+                return;
+            }
+            string s_url;
+            s_url = "receipt.aspx?orderID=" + orderID;
+            Response.Redirect(s_url);
+
+        }
+
+        protected void Btn_Click(object sender, EventArgs e)
+        {
+            string s_url;
+            s_url = "MainScreenWeb.aspx?stuffID=" + Team3Restaurant.ManagementSystem.Login.LoginMagement._stuffID;
+            Response.Redirect(s_url);
+        }
     }
 }

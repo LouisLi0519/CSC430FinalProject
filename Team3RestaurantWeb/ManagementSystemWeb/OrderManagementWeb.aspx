@@ -8,9 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="width: 520px; margin-left: 280px">
-            Order Management System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="BtnBackToMain" runat="server" OnClick="BtnBackToMain_Click" Text="BackToMain" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:GridView ID="GVOrderList" runat="server" AutoGenerateColumns="False" DataSourceID="OrderViewDataSource" OnSelectedIndexChanged="GVOrderList_SelectedIndexChanged">
+        <div style="width: 622px; margin-left: 280px">
+            Order Management System&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:GridView ID="GVOrderList" runat="server" AutoGenerateColumns="False" DataSourceID="OrderViewDataSource" OnSelectedIndexChanged="GVOrderList_SelectedIndexChanged">
                 <Columns>
                     <asp:BoundField DataField="OrderID" HeaderText="OrderID" SortExpression="OrderID" />
                     <asp:BoundField DataField="IpadID" HeaderText="IpadID" SortExpression="IpadID" />
@@ -27,8 +26,6 @@
                     
                 </Columns>
             </asp:GridView>
-            <div>
-            </div>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
         <asp:ObjectDataSource ID="OrderViewDataSource" runat="server" SelectMethod="GetOrderList" TypeName="Team3Restaurant.ManagementSystem.OrderManagement"></asp:ObjectDataSource>
@@ -47,6 +44,7 @@
         <div style="width: 525px; height: 146px; margin-left: 278px">
             <asp:GridView ID="GVOrderDetail" runat="server">
             </asp:GridView>
+            <asp:Button ID="BtnBackToMain" runat="server" OnClick="BtnBackToMain_Click" Text="BackToMain" />
         </div>
         
         <p style="margin-left: 280px">

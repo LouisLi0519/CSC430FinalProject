@@ -23,6 +23,52 @@ namespace Team3Restaurant.ManagementSystem
             get { return _orderid; }
             set { _orderid = value; }
         }
+        public List<OrderList> GetAllOrders()
+        {
+            DbConnection connection = DatabaseUtil.GetConnection();
+            DbCommand command = DatabaseUtil.GetCommand();
+
+            List<OrderList> list = new List<OrderList>();
+            try
+            {
+                connection.Open();
+                command.Connection = connection;
+                string commandString = "select distinct order_id,ipad_id from order_list";
+
+                command.CommandText = commandString;
+
+                DbDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        OrderList row = new OrderList();
+                        row.OrderID = reader["order_id"].ToString().Trim();
+                        row.IpadID = reader["ipad_id"].ToString().Trim();
+                        list.Add(row);
+                    }
+                }
+
+                reader.Close();
+            }
+            catch (DbException e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
+
+
+            return list;
+        }
 
         public List<OrderList> ShowUnpaidOrders()
         {

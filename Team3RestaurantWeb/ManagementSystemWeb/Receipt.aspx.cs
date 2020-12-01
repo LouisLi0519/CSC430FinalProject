@@ -11,6 +11,12 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Team3Restaurant.ManagementSystem.Login.LoginMagement.IsLogin())
+            {
+                string s_url;
+                s_url = "LoginWeb.aspx";
+                Response.Redirect(s_url);
+            }
             TxtOrderID.Text = Request.QueryString["orderID"];
             TxtDateTime.Text = DateTime.Now.ToString();
             float total = 0;
@@ -40,6 +46,11 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
         protected void BtnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("PaymentSystem.aspx");
+        }
+
+        protected void BtnPrint_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PrintSystemWeb.aspx");
         }
     }
 }

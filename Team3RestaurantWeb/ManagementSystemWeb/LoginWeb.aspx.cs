@@ -21,6 +21,8 @@ namespace Team3RestaurantWeb.LoginWeb
             if(p == "" || u == "")
             {
                 Response.Write("<script language='javascript'>window.alert('Please Enter Username or password！');</script>");
+                TxtPassword.Text = "";
+                TxtUserName.Text = "";
                 return;
             }
             Team3Restaurant.ManagementSystem.Login.LoginMagement loginSystem = new Team3Restaurant.ManagementSystem.Login.LoginMagement(u, p);

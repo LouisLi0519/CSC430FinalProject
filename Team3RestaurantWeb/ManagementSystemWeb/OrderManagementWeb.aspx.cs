@@ -45,12 +45,18 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
             Button order = sender as Button;
             string orderID = order.CommandArgument;
             string status = DLOrderStatus.SelectedValue;
-            if (orderID == null|| status.Equals("none"))
+            if (orderID == null)
                 return;
+            if (status.Equals("none"))
+            {
+                Response.Write("<script language='javascript'>window.alert('Please Select the Right Status！');</script>");
+                return;
+            }
          
 
             Team3Restaurant.ManagementSystem.OrderManagement OM = new Team3Restaurant.ManagementSystem.OrderManagement();
             OM.ChangeStatus(orderID, status);
+            DLOrderStatus.SelectedValue = "none";
             GVOrderList.DataBind();
 
         }

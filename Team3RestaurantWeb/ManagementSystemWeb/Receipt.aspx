@@ -40,6 +40,9 @@
         </p>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Pay and Print Receipt" />
         <asp:Button ID="BtnCancel" runat="server" OnClick="BtnCancel_Click" Text="Cancel" />
+        <p>
+            <asp:Button ID="BtnPrint" runat="server" OnClick="BtnPrint_Click" Text="Print(Go Back to Print System)" />
+        </p>
     </form>
 </body>
 </html>

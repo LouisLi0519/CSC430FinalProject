@@ -24,15 +24,6 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// BtnBackToMain control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnBackToMain;
-
-        /// <summary>
         /// GVOrderList control.
         /// </summary>
         /// <remarks>
@@ -67,5 +58,14 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GVOrderDetail;
+
+        /// <summary>
+        /// BtnBackToMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnBackToMain;
     }
 }

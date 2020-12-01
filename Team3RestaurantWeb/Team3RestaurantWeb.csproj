@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ManagementSystemWeb\Index.aspx" />
     <Content Include="ManagementSystemWeb\IPadManagementWeb.aspx" />
     <Content Include="ManagementSystemWeb\LoginWeb.aspx" />
     <Content Include="ManagementSystemWeb\MainScreenWeb.aspx" />
@@ -84,6 +85,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManagementSystemWeb\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagementSystemWeb\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ManagementSystemWeb\IPadManagementWeb.aspx.cs">
       <DependentUpon>IPadManagementWeb.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,7 +196,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52772</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44361/</IISUrl>
+          <IISUrl>https://localhost:44361</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
