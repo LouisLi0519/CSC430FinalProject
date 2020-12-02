@@ -62,5 +62,12 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
                 TxtPrice.Text = "none";
             }
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            string s_url;
+            s_url = "MainScreenWeb.aspx?stuffID=" + Team3Restaurant.ManagementSystem.Login.LoginMagement._stuffID;
+            Response.Redirect(s_url);
+        }
     }
 }
