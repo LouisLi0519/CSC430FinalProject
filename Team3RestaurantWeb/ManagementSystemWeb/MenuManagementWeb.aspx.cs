@@ -11,12 +11,12 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Team3Restaurant.ManagementSystem.Login.LoginMagement.IsLogin())
+           /* if (!Team3Restaurant.ManagementSystem.Login.LoginMagement.IsLogin())
             {
                 string s_url;
                 s_url = "LoginWeb.aspx";
                 Response.Redirect(s_url);
-            }
+            }*/
         }
     }
 }
