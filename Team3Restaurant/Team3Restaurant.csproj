@@ -44,6 +44,7 @@
     <Compile Include="DatabaseUtil.cs" />
     <Compile Include="ManagementSystem\IPadManagement.cs" />
     <Compile Include="ManagementSystem\LoginMagement.cs" />
+    <Compile Include="ManagementSystem\MenuManagement.cs" />
     <Compile Include="ManagementSystem\OrderList.cs" />
     <Compile Include="ManagementSystem\OrderManagement.cs" />
     <Compile Include="ManagementSystem\OrderView.cs" />
