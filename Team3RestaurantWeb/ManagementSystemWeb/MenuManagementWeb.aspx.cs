@@ -42,7 +42,7 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
             string itemID = changePrice.CommandArgument;
             string menuID = DLMenuID.SelectedValue;
             string price = TxtPrice.Text;
-            if (price == "none")
+            if (price == "none"||price.Length==0)
                 return;
             Team3Restaurant.ManagementSystem.MenuManagement MM = new Team3Restaurant.ManagementSystem.MenuManagement();
             float p = float.Parse(price);
@@ -78,20 +78,31 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
 
         protected void BtnAddItem_Click(object sender, EventArgs e)
         {
+            
             string menuID = DLMenuID.SelectedValue;
             Button button = sender as Button;
             string itemID = button.CommandArgument;
             string type = DLMenuType.SelectedValue;
             string desc = TxtDesc.Text;
-
-            Team3Restaurant.ManagementSystem.MenuManagement MM = new Team3Restaurant.ManagementSystem.MenuManagement();
-            if(MM.IsItemExist(menuID,itemID))
-                Response.Write("<script language='javascript'>window.alert('Item Already Exist!!');</script>");
-            else if (MM.AddItemToMenu(menuID, itemID, type, desc) > 0)
+            if (desc.Length == 0)
             {
-                Response.Write("<script language='javascript'>window.alert('Added');</script>");
-                GVMenuDetail.DataBind();
+                Response.Write("<script language='javascript'>window.alert('Please add description!!');</script>");
+
             }
+            else
+            {
+                Team3Restaurant.ManagementSystem.MenuManagement MM = new Team3Restaurant.ManagementSystem.MenuManagement();
+                if (MM.IsItemExist(menuID, itemID))
+                    Response.Write("<script language='javascript'>window.alert('Item Already Exist!!');</script>");
+                else if (MM.AddItemToMenu(menuID, itemID, type, desc) > 0)
+                {
+                    Response.Write("<script language='javascript'>window.alert('Added');</script>");
+                    GVMenuDetail.DataBind();
+                }
+                
+            }
+
+            
         }
     }
 }
