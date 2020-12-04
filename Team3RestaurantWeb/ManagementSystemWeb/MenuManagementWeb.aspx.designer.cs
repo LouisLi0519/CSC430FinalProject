@@ -42,6 +42,33 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
         protected global::System.Web.UI.WebControls.DropDownList DLMenuID;
 
         /// <summary>
+        /// LblType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblType;
+
+        /// <summary>
+        /// DLMenuType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DLMenuType;
+
+        /// <summary>
+        /// MenuTypeDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource MenuTypeDataSource;
+
+        /// <summary>
         /// MenuIDDataSource control.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,42 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtPrice;
+
+        /// <summary>
+        /// GVItemDetail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GVItemDetail;
+
+        /// <summary>
+        /// ItemDetailDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource ItemDetailDataSource;
+
+        /// <summary>
+        /// LblDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblDesc;
+
+        /// <summary>
+        /// TxtDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtDesc;
 
         /// <summary>
         /// Button5 control.
