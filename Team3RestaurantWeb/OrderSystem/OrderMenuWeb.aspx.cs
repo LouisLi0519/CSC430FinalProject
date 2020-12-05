@@ -11,7 +11,7 @@ namespace Team3RestaurantWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            TxtIPadID.Text = "I001";
+            TxtIPadID.Text = Request.QueryString["iPadID"];
             Team3Restaurant.OrderSystem OS = new Team3Restaurant.OrderSystem();
             string menuID = OS.GetMenu(TxtIPadID.Text);
 

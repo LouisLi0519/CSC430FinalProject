@@ -20,23 +20,11 @@
                 <asp:BoundField DataField="ItemType" HeaderText="ItemType" SortExpression="ItemType" />
                 <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                 <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                <asp:TemplateField HeaderText="Quantity">  
-                    <ItemTemplate>  
-                        <asp:DropDownList ID="Quantity" runat="server"> 
-                            <asp:ListItem Value ="0"></asp:ListItem>
-                            <asp:ListItem Value ="1"></asp:ListItem>
-                            <asp:ListItem Value ="2"></asp:ListItem>
-                            <asp:ListItem Value ="3"></asp:ListItem>
-                            <asp:ListItem Value ="4"></asp:ListItem>
-                            <asp:ListItem Value ="5"></asp:ListItem>
-                        </asp:DropDownList>  
-                    </ItemTemplate>  
-                </asp:TemplateField> 
             </Columns>
         </asp:GridView>
         <asp:ObjectDataSource ID="MenuItemDataSource" runat="server" SelectMethod="ShowMenuItems" TypeName="Team3Restaurant.OrderSystem">
             <SelectParameters>
-                <asp:Parameter DefaultValue="M100" Name="menuID" Type="String" />
+                <asp:QueryStringParameter DefaultValue="" Name="menuID" QueryStringField="menuID" Type="String" />
             </SelectParameters>
         </asp:ObjectDataSource>
         <asp:Button ID="BtnMakeOrder" runat="server" OnClick="BtnMakeOrder_Click" Text="Make Order" />

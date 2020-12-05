@@ -32,7 +32,9 @@ namespace Team3RestaurantWeb.ManagementSystemWeb
             Team3Restaurant.ManagementSystem.IPadManagement IM = new Team3Restaurant.ManagementSystem.IPadManagement();
             if(IM.UpdateMenuToIPad(ipadID, menuID) != 0)
             {
-                Response.Redirect("IPadManagementWeb.aspx");
+                Response.Write("<script language='javascript'>window.alert('Done!');</script>");
+                GVIPad.DataBind();
+   //             Response.Redirect("IPadManagementWeb.aspx");
             }
                 
 

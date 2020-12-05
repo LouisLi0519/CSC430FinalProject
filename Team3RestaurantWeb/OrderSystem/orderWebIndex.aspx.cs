@@ -12,10 +12,11 @@ namespace Team3RestaurantWeb.OrderSystem
         protected void Page_Load(object sender, EventArgs e)
         {
             Team3Restaurant.OrderSystem OS = new Team3Restaurant.OrderSystem();
-            string menuID = OS.GetMenu("I001");
+            string iPadID = "I001";
+            string menuID = OS.GetMenu(iPadID);
             string s_url;
 
-            s_url = "OrderMenuWeb.aspx?menuID="+ menuID;
+            s_url = "OrderMenuWeb.aspx?menuID="+ menuID+"&iPadID=" + iPadID;
             Response.Redirect(s_url);
         }
     }
